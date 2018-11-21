@@ -5,9 +5,11 @@ export const theme = createMuiTheme({})
 
 import { Star as StarIcon } from '@material-ui/icons'
 
+import withRoot from '../../withRoot'
+
 export interface MuiTestProps {}
 
-export default class MuiTest extends React.Component<MuiTestProps, any> {
+class MuiTest extends React.Component<MuiTestProps, any> {
   public render() {
     return (
       <MuiThemeProvider theme={theme}>
@@ -16,3 +18,5 @@ export default class MuiTest extends React.Component<MuiTestProps, any> {
     )
   }
 }
+
+export default withRoot(MuiTest)
